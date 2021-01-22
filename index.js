@@ -246,18 +246,18 @@ If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
 
 function get20s(arr){
   let start, end;
-  let narr = [];
-  for(let i = 0; i<arr.length; i++)
+  let narr = []; // shorthand for new array
+  for(let i = 0; i<arr.length; i++) // iterates through each object in array
   {
-    start = parseInt(arr[i].years.substring(0,2));
-    end = parseInt(arr[i].years.substring(7,9));
+    start = parseInt(arr[i].years.substring(0,2)); // converts first 2 digits of the artists birth year into an int since all years in the 20th century start with 19
+    end = parseInt(arr[i].years.substring(7,9)); // converts first 2 digits of the artists death year into an int since all years in the 20th century start with 19
     console.log(start + " " + end);
-    if(start == 19 && end == 19)
+    if(start == 19 && end == 19) //compares first two digits of the birth & death year to 19
     {
-      narr.push(arr[i].name);
+      narr.push(arr[i].name); //adds artists name to array if they were born & died in the 1900s
     }
   }
-  return narr;
+  return narr; // returns completed array
 }
 
 
