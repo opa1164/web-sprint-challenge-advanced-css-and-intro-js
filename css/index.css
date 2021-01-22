@@ -98,7 +98,7 @@ nav span{
     align-items: center;
     height:60vh;
     margin:5% 0;
-}	
+}
 .title-container div:hover {	
     opacity: 80%;	
 }	
@@ -133,4 +133,33 @@ button:hover{
 }
 .artist img{
     width:100%;
+}
+
+@media (max-width: 500px)
+{
+    nav{
+        width:75%;
+    }
+    .title-container div {
+        width:100%;
+    }
+    
+    .artists-container{
+        flex-wrap:wrap;
+    }
+    .artist{
+        width:80%;
+        height:fit-content;
+    }
+    .artist img{
+        height: 30%;
+    }
+    body{
+        font-size:1rem;
+        line-height: 1.5;
+        font-family: 'Raleway', sans-serif;	
+    }
+    .artists-container a{
+        font-size: 1.5rem;
+    }
 }
